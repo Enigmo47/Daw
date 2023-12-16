@@ -1,0 +1,28 @@
+/* estilos.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  div {
+    background-color: #999595; /* Color de fondo gris */
+    padding: 10px; /* Espaciado interno para mayor legibilidad */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  div span {
+    margin-right: 10px; /* Espaciado entre las palabras */
+  }
+  
+  span:first-child {
+    float: left;
+  }
+  
+  span:last-child {
+    float: right;
+  }
+  

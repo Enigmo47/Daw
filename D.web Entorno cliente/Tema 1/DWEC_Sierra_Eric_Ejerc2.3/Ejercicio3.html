@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de DNI</title>
+</head>
+<body>
+    <script>
+        // Función para calcular la letra del DNI
+        function calcularLetraDNI(numeroDNI) {
+            const letrasDNI = 'TRWAGMYFPDXBNJZSQVHLCKET';
+            const resto = numeroDNI % 23;
+            return letrasDNI.charAt(resto);
+        }
+
+        // Obtener el DNI del usuario mediante una ventana emergente
+        const dniUsuario = prompt("Introduce tu número de DNI (sin la letra):");
+
+        // Validar si el input es un número válido
+        const numeroDNI = parseInt(dniUsuario, 10);
+        if (isNaN(numeroDNI)) {
+            alert("Por favor, introduce un número válido.");
+        } else {
+            // Calcular la letra del DNI
+            const letraCalculada = calcularLetraDNI(numeroDNI);
+
+            // Obtener la letra introducida por el usuario mediante una ventana emergente
+            const letraUsuario = prompt("Introduce la letra de tu DNI:");
+
+            // Validar si la letra introducida es correcta
+            if (letraCalculada === letraUsuario.toUpperCase()) {
+                alert("El DNI introducido es correcto.");
+            } else {
+                alert("El DNI introducido no es correcto. La letra correcta es: " + letraCalculada);
+            }
+        }
+    </script>
+</body>
+</html>

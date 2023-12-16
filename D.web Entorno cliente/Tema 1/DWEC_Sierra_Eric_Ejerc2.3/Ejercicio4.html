@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varios objetos predefinidos de JS</title>
+    <style>
+        body {
+            background-color: #808080; /* Gris */
+            color: #ffffff; /* Blanco */
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Obtener el tamaño de la pantalla del usuario
+        const anchoPantalla = window.screen.width;
+        const altoPantalla = window.screen.height;
+
+        // Calcular la diagonal en píxeles con 1 decimal
+        const diagonalPantalla = Math.sqrt(Math.pow(anchoPantalla, 2) + Math.pow(altoPantalla, 2));
+
+        // Crear un elemento de encabezado h1 para mostrar la información
+        const h1Element = document.createElement("h1");
+        h1Element.textContent = `Varios objetos predefinidos de JS - Diagonal de la pantalla: ${diagonalPantalla.toFixed(1)} píxeles`;
+
+        // Agregar el elemento h1 al cuerpo del documento
+        document.body.appendChild(h1Element);
+    </script>
+</body>
+</html>

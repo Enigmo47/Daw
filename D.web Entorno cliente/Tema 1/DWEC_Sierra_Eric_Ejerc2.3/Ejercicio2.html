@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fecha y Hora Actual</title>
+</head>
+<body>
+    <script>
+        // Función para obtener el nombre del día de la semana
+        function obtenerNombreDia(dia) {
+            const nombresDias = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
+            return nombresDias[dia];
+        }
+
+        // Función para obtener el nombre del mes
+        function obtenerNombreMes(mes) {
+            const nombresMeses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+            return nombresMeses[mes];
+        }
+
+        // Obtener la fecha y hora actual
+        const fechaActual = new Date();
+        const diaSemana = obtenerNombreDia(fechaActual.getDay());
+        const dia = fechaActual.getDate();
+        const mes = obtenerNombreMes(fechaActual.getMonth());
+        const anio = fechaActual.getFullYear();
+        const horas = fechaActual.getHours();
+        const minutos = fechaActual.getMinutes();
+
+        // Formatear la salida
+        const resultado = `Hoy es ${diaSemana}, ${dia} de ${mes} de ${anio} y son las ${horas}:${minutos < 10 ? '0' : ''}${minutos} horas`;
+
+        // Mostrar el resultado en el cuerpo del documento
+        document.body.innerHTML = resultado;
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del PUM</title>
+</head>
+<body>
+    <script>
+        // Función para generar el juego del PUM hasta 100
+        function generarPum() {
+            // Inicializar la cadena de números
+            let numeros = "";
+
+            // Bucle para iterar hasta 100
+            for (let i = 1; i <= 100; i++) {
+                // Verificar si el número termina en 7 o es múltiplo de 7
+                if (i % 7 === 0 || i % 10 === 7) {
+                    numeros += "PUM";
+                } else {
+                    numeros += i;
+                }
+
+                // Agregar coma y espacio, excepto para el último número de cada línea
+                if (i % 10 !== 0) {
+                    numeros += ", ";
+                } else {
+                    numeros += "<br>";  // Cambiar de línea después de cada décima iteración
+                }
+            }
+
+            // Mostrar el resultado en el cuerpo del documento
+            document.body.innerHTML = numeros;
+        }
+
+        // Llamar a la función para generar el juego del PUM
+        generarPum();
+    </script>
+</body>
+</html>
