@@ -1,0 +1,12 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+select, button {
+    margin: 10px;
+}
+
+#result, #history {
+    margin-top: 20px;
+}

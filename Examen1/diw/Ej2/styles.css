@@ -1,0 +1,34 @@
+input{
+    display: flex;
+}
+
+.listadisc, .listaromanos, .listasquere {
+    display: none;
+}
+
+.opcion1:checked ~  .listaromanos,
+.opcion2:checked ~  .listadisc,
+.opcion3:checked ~  .listasquere {
+    display: block;
+}
+
+h2{
+    color: blue
+}
+.palabras{
+    display: flex;
+    gap: 5em;
+    flex-direction: row;
+}
+.contenedor{
+    margin: 2em;
+    padding: 1em;
+    border: 1px solid black;
+    width: 10em;
+}
+.eng{
+    display: none;
+}
+.esp:active +.eng{
+    display: block;
+}
